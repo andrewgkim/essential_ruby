@@ -25,5 +25,9 @@ principal_amount = 100000.0
 #   Re-use the pmt method that you defined in Challenge 1.
 
 # ====================
-# Your code goes here.
+
+loan_quotes.each do |estimate|
+  puts "At #{estimate["bank"]}, your expected monthly payment is #{pmt(estimate["rate"], number_of_payments, principal_amount)}."
+end
+
 # ====================
