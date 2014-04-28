@@ -14,10 +14,13 @@
 #   http://en.wikipedia.org/wiki/Mortgage_calculator
 
 def pmt(rate, nper, pv)
-  # ============================================
-  # Your code to implement the method goes here.
-  # ============================================
+  (rate/12 * pv) / (1 - ((1 + rate/12) ** -nper))
 end
+
+# This assumes the interest rate provided is yearly so it needs to recalculated to the monthly interest rate.
+
+puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+
 
 # Example usage of the method:
 
